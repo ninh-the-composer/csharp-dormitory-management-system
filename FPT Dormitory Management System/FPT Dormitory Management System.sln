@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FPT Dormitory Management System", "FPT Dormitory Management System\FPT Dormitory Management System.csproj", "{C82413E5-206B-4B8B-98A8-787A4318D4BA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DormitoryManagement", "FPT Dormitory Management System\DormitoryManagement.csproj", "{C82413E5-206B-4B8B-98A8-787A4318D4BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

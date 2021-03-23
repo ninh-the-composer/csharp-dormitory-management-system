@@ -6,7 +6,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 
-namespace FPT_Dormitory_Management_System {
+namespace DormitoryManagement {
     public class MvcApplication : System.Web.HttpApplication {
         protected void Application_Start() {
             AreaRegistration.RegisterAllAreas();
