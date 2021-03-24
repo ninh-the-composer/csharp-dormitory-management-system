@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700">
+    <link rel="stylesheet" href="~/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="~/fonts/font-awesome.min.css">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <title>@ViewBag.Title</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">OCD</a><button data-toggle="collapse"
+                                                                     data-target="#navcol-1" class="navbar-toggler">
+                <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link active" href="checkbed.html">Check Bed</a></li>
+                    <li class="nav-item"><a class="nav-link" href="request.html">Create Request</a></li>
+
+                    <!--  toggle options-->
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle nav-link" href="#" role="button" id="dropdownMenuLink"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                datpthe141311
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="invoice.html">View Invoice</a>
+                                <a class="dropdown-item" href="viewrequest.html">View Request</a>
+                                <a class="dropdown-item" href="invoicepay.html">Payments</a>
+                            </div>
+                        </div>
+                    </li>
+                    <!--  logout  -->
+                    <li class="nav-item"><a class="nav-link" href="#">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    @RenderBody()
+    <footer id="footerpad">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-8 mx-auto">
+                    <ul class="list-inline text-center">
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-pinterest fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted text-center">
+                        Copyright &copy; Your Company 2021 | Web Design by <a href="about.html">Team 2</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/Scripts/smart-forms.min.js"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+
+</html>
