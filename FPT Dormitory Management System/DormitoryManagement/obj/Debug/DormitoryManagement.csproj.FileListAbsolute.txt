@@ -1,0 +1,165 @@
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\DormitoryManagement.dll.config
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\DormitoryManagement.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\DormitoryManagement.pdb
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\csc.exe
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\csc.exe.config
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\csc.rsp
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\csi.exe
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\csi.exe.config
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\csi.rsp
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.AppContext.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Console.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.IO.Compression.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Net.Http.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Net.Sockets.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.ValueTuple.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Xml.XPath.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\vbc.exe
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\vbc.exe.config
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\vbc.rsp
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\VBCSCompiler.exe
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\Antlr3.Runtime.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\EntityFramework.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\EntityFramework.SqlServer.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\Newtonsoft.Json.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\System.Web.Helpers.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\System.Web.Mvc.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\System.Web.Optimization.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\System.Web.Razor.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\System.Web.WebPages.Deployment.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\System.Web.WebPages.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\System.Web.WebPages.Razor.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\WebGrease.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\EntityFramework.xml
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\EntityFramework.SqlServer.xml
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\System.Web.Helpers.xml
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\System.Web.Mvc.xml
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\System.Web.Optimization.xml
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\System.Web.Razor.xml
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\System.Web.WebPages.xml
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\System.Web.WebPages.Deployment.xml
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\System.Web.WebPages.Razor.xml
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\Newtonsoft.Json.xml
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\Antlr3.Runtime.pdb
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\obj\Debug\DormitoryManagement.csproj.CoreCompileInputs.cache
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\obj\Debug\DormitoryManagement.csproj.CopyComplete
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\obj\Debug\DormitoryManagement.dll
+C:\Users\sogor\source\repos\FPT Dormitory Management System\DormitoryManagement\obj\Debug\DormitoryManagement.pdb
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\DormitoryManagement.dll.config
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\DormitoryManagement.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\DormitoryManagement.pdb
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\csc.exe
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\csc.exe.config
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\csc.rsp
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\csi.exe
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\csi.exe.config
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\csi.rsp
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.AppContext.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Collections.Immutable.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Console.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Globalization.Calendars.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.IO.Compression.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.IO.FileSystem.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Net.Http.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Net.Sockets.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Reflection.Metadata.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.ValueTuple.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Xml.XPath.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\vbc.exe
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\vbc.exe.config
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\vbc.rsp
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\VBCSCompiler.exe
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\roslyn\VBCSCompiler.exe.config
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\Antlr3.Runtime.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\EntityFramework.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\EntityFramework.SqlServer.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\Microsoft.Web.Infrastructure.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\Newtonsoft.Json.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\System.Web.Helpers.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\System.Web.Mvc.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\System.Web.Optimization.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\System.Web.Razor.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\System.Web.WebPages.Deployment.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\System.Web.WebPages.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\System.Web.WebPages.Razor.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\WebGrease.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\EntityFramework.xml
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\EntityFramework.SqlServer.xml
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\System.Web.Helpers.xml
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\System.Web.Mvc.xml
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\System.Web.Optimization.xml
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\System.Web.Razor.xml
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\System.Web.WebPages.xml
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\System.Web.WebPages.Deployment.xml
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\System.Web.WebPages.Razor.xml
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\Newtonsoft.Json.xml
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\Antlr3.Runtime.pdb
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\obj\Debug\DormitoryManagement.csprojAssemblyReference.cache
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\obj\Debug\DormitoryManagement.csproj.CoreCompileInputs.cache
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\obj\Debug\DormitoryManagement.csproj.CopyComplete
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\obj\Debug\DormitoryManagement.dll
+D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\obj\Debug\DormitoryManagement.pdb
