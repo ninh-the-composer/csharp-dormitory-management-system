@@ -1,1 +1,0 @@
-# csharp-dormitory-management-system
