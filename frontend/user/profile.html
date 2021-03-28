@@ -1,0 +1,127 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"><title>home</title><link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700"><link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css"><link rel="stylesheet" href="assets/fonts/font-awesome.min.css"><link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css"><link rel="stylesheet" href="assets/css/styles.min.css"></head><body><nav class="navbar navbar-light navbar-expand-md">
+  <div class="container"><a class="navbar-brand" href="index.html">OCD</a><button data-toggle="collapse"
+      data-target="#navcol-1" class="navbar-toggler"><span class="sr-only">Toggle navigation</span><span
+        class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navcol-1">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link active" href="checkbed.html">Check Bed</a></li>
+        <li class="nav-item"><a class="nav-link" href="request.html">Create Request</a></li>
+
+        <!--  toggle options-->
+        <li class="nav-item">
+          <div class="dropdown">
+            <a class="dropdown-toggle nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              datpthe141311
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="profile.html">View Profile</a>
+              <a class="dropdown-item" href="invoice.html">View Invoice</a>
+              <a class="dropdown-item" href="viewrequest.html">View Request</a>
+              <a class="dropdown-item" href="invoicepay.html">Payments</a>
+            </div>
+          </div>
+        </li>
+        <!--  logout  -->
+        <li class="nav-item"><a class="nav-link" href="#">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav><div class="container container-profile">
+    <div class="row gutters">
+        <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="account-settings">
+                        <div class="user-profile">
+                            <div class="user-avatar">
+                                <img src="http://placekitten.com/500/400" alt="User Avatar">
+                            </div>
+                            <h5 class="user-name">Dat Pham</h5>
+                            <h6 class="user-email">datpthe141325@fpt.edu.vn</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+            <div class="card h-100">
+                <form action="index.html" method="post">
+                    <div class="card-body">
+                        <div class="row gutters">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <h6 class="mb-2 text-primary">Personal Details</h6>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="fullName">Full Name</label>
+                                    <input type="text" class="form-control" id="fullName" placeholder="full name">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="eMail">Email</label>
+                                    <input type="email" class="form-control" id="eMail" placeholder="email">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="phone">Student Code:</label>
+                                    <input type="text" class="form-control" id="phone" placeholder="student code">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="website">Gender</label>
+                                    <input type="text" class="form-control" id="website" placeholder="gender">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row gutters">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <h6 class="mt-3 mb-2 text-primary">Dormitory Detail</h6>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="Street">Room</label>
+                                    <input type="name" class="form-control" id="Street" placeholder="ex: A101">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="ciTy">Bed</label>
+                                    <input type="name" class="form-control" id="ciTy" placeholder="ex: 1">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="sTate">Electric Number</label>
+                                    <input type="text" class="form-control" id="sTate"
+                                        placeholder="Your current electric using number. ex: 50">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="zIp">Water Number</label>
+                                    <input type="text" class="form-control" id="zIp"
+                                        placeholder="Your current water using number. ex: 50">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row gutters">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="text-right">
+                                    <button type="button" id="submit" name="submit"
+                                        class="btn btn-secondary">Cancel</button>
+                                    <button type="submit" id="submit" name="submit"
+                                        class="btn btn-primary">Update</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div><footer id="footerpad"><div class="container"><div class="row"><div class="col-md-6 col-lg-8 mx-auto"><ul class="list-inline text-center"><li class="list-inline-item"><a href="#"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x fa-inverse"></i></span></a></li><li class="list-inline-item"><a href="#"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span></a></li><li class="list-inline-item"><a href="#"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-instagram fa-stack-1x fa-inverse"></i></span></a></li><li class="list-inline-item"><a href="#"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-pinterest fa-stack-1x fa-inverse"></i></span></a></li></ul><p class="copyright text-muted text-center">Copyright &copy; Your Company 2021 | Web Design by <a href="about.html">Team 2</a></p></div></div></div></footer><script src="assets/js/jquery.min.js"></script><script src="assets/bootstrap/js/bootstrap.min.js"></script><script src="assets/js/smart-forms.min.js"></script><script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script><script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script><script src="assets/js/script.min.js"></script></body></html>
