@@ -163,3 +163,7 @@ D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\Dormitor
 D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\obj\Debug\DormitoryManagement.csproj.CopyComplete
 D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\obj\Debug\DormitoryManagement.dll
 D:\Semester5-SP21\PRN292\1 - Assignment\FPT Dormitory Management System\DormitoryManagement\obj\Debug\DormitoryManagement.pdb
+E:\OneDrive\PRN292 Project\main\FPT Dormitory Management System\DormitoryManagement\obj\Debug\DormitoryManagement.csprojAssemblyReference.cache
+E:\OneDrive\PRN292 Project\main\FPT Dormitory Management System\DormitoryManagement\obj\Debug\DormitoryManagement.csproj.CoreCompileInputs.cache
+E:\OneDrive\PRN292 Project\main\FPT Dormitory Management System\DormitoryManagement\obj\Debug\DormitoryManagement.dll
+E:\OneDrive\PRN292 Project\main\FPT Dormitory Management System\DormitoryManagement\obj\Debug\DormitoryManagement.pdb

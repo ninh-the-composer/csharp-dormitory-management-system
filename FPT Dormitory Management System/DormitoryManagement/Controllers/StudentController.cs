@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DormitoryManagement.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,7 +11,7 @@ namespace DormitoryManagement.Controllers
     {
         // GET: Student/CheckBed
         public ActionResult CheckBed() {
-
+            
             return View();
         }
         // GET: Student
