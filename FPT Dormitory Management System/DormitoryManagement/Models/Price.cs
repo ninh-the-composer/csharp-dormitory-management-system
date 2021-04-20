@@ -11,7 +11,7 @@ namespace DormitoryManagement.Models
     {
         public int Id { get; set; }
 
-        public int? PriceType { get; set; }
+        public int? TypeId { get; set; }
 
         [Column(TypeName = "money")]
         public decimal? StandardPrice { get; set; }
@@ -20,6 +20,6 @@ namespace DormitoryManagement.Models
 
         public DateTime? Date { get; set; }
 
-        public virtual PriceType PriceType1 { get; set; }
+        public virtual PriceType PriceType { get; set; }
     }
 }

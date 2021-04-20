@@ -11,11 +11,13 @@ namespace DormitoryManagement.Models
     {
         public int Id { get; set; }
 
-        public int? StudentId { get; set; }
+        public int StudentId { get; set; }
 
         public int? TypeId { get; set; }
 
-        public double? Amount { get; set; }
+        public int? RoomId { get; set; }
+
+        public double Amount { get; set; }
 
         public int? NumberOfUse { get; set; }
 
@@ -28,6 +30,8 @@ namespace DormitoryManagement.Models
         public DateTime? DateCreated { get; set; }
 
         public virtual InvoiceType InvoiceType { get; set; }
+
+        public virtual Room Room { get; set; }
 
         public virtual Student Student { get; set; }
     }

@@ -17,11 +17,11 @@ namespace DormitoryManagement.Models
 
         public int Id { get; set; }
 
-        public int? RoomId { get; set; }
+        public int RoomId { get; set; }
 
-        public byte? BedNumber { get; set; }
+        public byte BedNumber { get; set; }
 
-        public bool? IsAvailable { get; set; }
+        public bool IsAvailable { get; set; }
 
         public virtual Room Room { get; set; }
 

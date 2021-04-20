@@ -11,14 +11,16 @@ namespace DormitoryManagement.Models
     {
         public int Id { get; set; }
 
+        [Required]
         [StringLength(255)]
         public string Username { get; set; }
 
+        [Required]
         [StringLength(255)]
         public string Password { get; set; }
 
-        public bool? IsManager { get; set; }
+        public bool IsManager { get; set; }
 
-        public bool? IsActive { get; set; }
+        public bool IsActive { get; set; }
     }
 }

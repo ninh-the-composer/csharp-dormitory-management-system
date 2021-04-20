@@ -1,0 +1,84 @@
+﻿@using DormitoryManagement.Models;
+@{
+    ViewBag.Title = "ViewStudentRequest";
+    Layout = "~/Views/Shared/_ManagerLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <h3 class="text-dark my-5">Student&#39;s Requests</h3>
+</div>
+<div class="card shadow" style="margin: 0 15px;">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6 text-nowrap">
+                <div id="dataTable_length" class="dataTables_length">
+                    <label>
+                        Show <select class="form-control form-control-sm custom-select custom-select-sm">
+                            <option value="10" selected>10</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="table-responsive table mt-2" id="dataTable-1" role="grid">
+            <table class="table my-0" id="dataTable">
+                <thead>
+                    <tr>
+                        <th>Date Created</th>
+                        <th>Student ID</th>
+                        <th>Student Name</th>
+                        <th>Request Type</th>
+                        <th>Purpose</th>
+                        <th>Reply</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(Request rq in ViewBag.RequestList) {
+                    <tr>
+                        <td>@Convert.ToString(string.Format("{0:dd/MM/yyyy}", rq.DateCreated))</td>
+                        <td>@rq.Student.StudentCode</td>
+                        <td>@rq.Student.Name</td>
+                        <td>@rq.RequestType.Name</td>
+                        <td>@rq.Purpose</td>
+                        <td>@rq.Reply</td>
+                        @if ((bool)rq.IsDone) {
+                            <td><a href="#" class="btn btn-primary btn-sm disabled">Replied</a></td>
+                        }
+                        else {
+                            <td><a href="@Url.Action("ReplyRequest", "Manager",new { id = rq.Id})" class="btn btn-primary btn-sm">Reply</a></td>
+                        }
+                    </tr>
+                    }
+                    
+                </tbody>
+            </table>
+        </div>
+        <div class="row">
+            <div class="col-md-6 align-self-center">
+                <p id="dataTable_info" class="dataTables_info" role="status">Total Requests: @ViewBag.listCount</p>
+            </div>
+            <div class="col-md-6">
+                <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
+                    <ul class="pagination">
+                        @for (int i = 1; i <= ViewBag.maxPage; i++) {
+                            if (ViewBag.pageIndex == i) {
+                                <li class="page-item active"><a class="page-link" href="@Url.Action("ViewStudentRequest", "Manager",new { page=i})">@i</a></li>
+                            }
+                            else {
+                                <li class="page-item"><a class="page-link" href="@Url.Action("ViewStudentRequest", "Manager",new { page=i})">@i</a></li>
+                            }
+                        }
+                        <li class="page-item">
+
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+

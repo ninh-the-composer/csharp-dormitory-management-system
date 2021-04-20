@@ -1,0 +1,51 @@
+﻿@using DormitoryManagement.Models;
+@model  PagedList.IPagedList<DormitoryManagement.Models.Invoice>
+@{
+    ViewBag.Title = "View All Invoices";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2 class="text-center" id="container-bill-header">Invoice History</h2>
+<div id="container-bill-table">
+    <div class="container">
+        <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>Room</th>
+                    <th>Type</th>
+                    <th>Price</th>
+                    <th>Date Create</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="table-body-invoice">
+                @foreach (Invoice invoice in ViewBag.StudentInvoice) {
+
+                    <tr>
+                        <td>@invoice.Student.Bed.Room.GetRoomName()</td>
+                        <td>@invoice.InvoiceType.Name</td>
+                        <td>@string.Format("{0:N0}", invoice.Amount) VNĐ</td>
+                        <td>@Convert.ToString(string.Format("{0:dd/MM/yyyy}", invoice.DateCreated))</td>
+                        <td><a class="btn btn-outline-primary" href="ViewInvoiceDetail?id=@invoice.Id">Details</a></td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+    <nav id="pagination-invoice">
+        <ul class="pagination">
+            @for (int i = 1; i <= ViewBag.maxPage; i++) {
+                if (ViewBag.pageIndex == i) {
+                    <li class="page-item active"><a class="page-link" href="@Url.Action("ViewInvoices", "Student",new { page=i})">@i</a></li>
+                } else {
+                    <li class="page-item"><a class="page-link" href="@Url.Action("ViewInvoices", "Student",new { page=i})">@i</a></li>
+                }
+            }
+            
+
+        </ul>
+    </nav>
+</div>
+

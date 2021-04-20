@@ -1,0 +1,220 @@
+﻿@model DormitoryManagement.Models.Student
+@using DormitoryManagement.Models;
+@{
+    ViewBag.Title = "ViewStudentDetail";
+    Layout = "~/Views/Shared/_ManagerLayout.cshtml";
+}
+
+<h2>Student Profile</h2>
+
+
+
+<div class="container-fluid">
+    <div class="row mb-3">
+        <div class="col-lg-4">
+            <div class="card mb-3">
+                <div class="card-body text-center shadow">
+                    @if (Model.Avatar != null && !Model.Avatar.Trim().Equals("")) {
+                        <img class="rounded-circle mb-3 mt-4"
+                             src="@Model.Avatar"
+                             width="160"
+                             height="160" />
+                    }
+                    else {
+                        <img class="rounded-circle mb-3 mt-4"
+                             src="~/Content/img/avatar.png"
+                             width="160"
+                             height="160" />
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="row mb-3 d-none">
+                <div class="col">
+                    <div class="card text-white bg-primary shadow">
+                        <div class="card-body">
+                            <div class="row mb-2">
+                                <div class="col">
+                                    <p class="m-0">Peformance</p>
+                                    <p class="m-0"><strong>65.2%</strong></p>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-rocket fa-2x"></i>
+                                </div>
+                            </div>
+                            <p class="text-white-50 small m-0">
+                                <i class="fas fa-arrow-up"></i>&nbsp;5% since last
+                                month
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card text-white bg-success shadow">
+                        <div class="card-body">
+                            <div class="row mb-2">
+                                <div class="col">
+                                    <p class="m-0">Peformance</p>
+                                    <p class="m-0"><strong>65.2%</strong></p>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-rocket fa-2x"></i>
+                                </div>
+                            </div>
+                            <p class="text-white-50 small m-0">
+                                <i class="fas fa-arrow-up"></i>&nbsp;5% since last
+                                month
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="card shadow mb-3">
+                        <div class="card-header py-3">
+                            <p class="text-primary m-0 font-weight-bold">
+                                User Info
+                            </p>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label><strong>Username</strong></label>
+                                            <p>@Model.Name</p>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label><strong>Gender</strong></label>
+                                            @if (Model.Gender == true) {
+                                                <div>Male</div>
+                                            }
+                                            else {
+                                                <div>Female</div>
+                                            }
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label><strong>Student Code</strong></label>
+                                            <p>@Model.StudentCode</p>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label><strong>Email Address</strong></label>
+                                            <p>@Model.Email</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card shadow">
+    <div class="card-header py-3">
+        <p class="text-primary m-0 font-weight-bold">Invoices History</p>
+    </div>
+    @if(ViewBag.listCount == 0) {
+        <h4 style="text-align:center;padding-top:50px;">No Invoice History</h4>
+    }
+    else { 
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6 text-nowrap">
+                <div id="dataTable_length"
+                     class="dataTables_length"
+                     aria-controls="dataTable">
+                    <label>
+                        Show <select class="form-control form-control-sm custom-select custom-select-sm">
+                            <option value="10" selected>10</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="table-responsive table mt-2"
+             id="dataTable-1"
+             role="grid"
+             aria-describedby="dataTable_info">
+            <table class="table my-0" id="dataTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Type</th>
+                        <th>Ammount</th>
+                        <th>Date Created</th>
+                        <th>Note</th>
+                        <th>Status</th>
+                        <th>Detail</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Invoice invoice in ViewBag.StudentInvoices) {
+                        <tr>
+                            <td>@invoice.Id</td>
+                            <td>@invoice.InvoiceType.Name</td>
+                            <td>@string.Format("{0:N0}", invoice.Amount) VNĐ</td>
+                            <td>@Convert.ToString(string.Format("{0:dd/MM/yyyy}", invoice.DateCreated))</td>
+                            <td>@invoice.Note</td>
+                            @if (@invoice.IsPaid == true) {
+                                <td>Paid</td>
+                            }
+                            else {
+                                <td>Not yet</td>
+                            }
+
+                            <td><a href="@Url.Action("ViewInvoiceDetail", "Manager",new { stId=Model.Id, invoiceId = invoice.Id})">Detail</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="row">
+            <div class="col-md-6 align-self-center">
+                <p id="dataTable_info"
+                   class="dataTables_info"
+                   role="status"
+                   aria-live="polite">
+                    Showing 1 to 10 of 27
+                </p>
+            </div>
+            <div class="col-md-6">
+                <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
+                    <ul class="pagination">
+                        @for (int i = 1; i <= ViewBag.maxPage; i++) {
+                            if (ViewBag.pageIndex == i) {
+                                <li class="page-item active"><a class="page-link" href="@Url.Action("ViewStudentDetail", "Manager",new { page=i})">@i</a></li>
+                            }
+                            else {
+                                <li class="page-item"><a class="page-link" href="@Url.Action("ViewStudentDetail", "Manager",new { page=i})">@i</a></li>
+                            }
+                        }
+                        <li class="page-item">
+
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    }
+</div>
+
+
+
+

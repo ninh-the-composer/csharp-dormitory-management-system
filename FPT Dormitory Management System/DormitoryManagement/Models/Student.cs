@@ -26,7 +26,7 @@ namespace DormitoryManagement.Models
         [StringLength(255)]
         public string Name { get; set; }
 
-        public bool? Gender { get; set; }
+        public bool Gender { get; set; }
 
         [StringLength(255)]
         public string Email { get; set; }

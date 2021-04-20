@@ -1,0 +1,31 @@
+﻿@using DormitoryManagement.Models;
+@{
+    ViewBag.Title = "Create Request";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="form-request">
+    <section class="contact-clean">
+        <form action="CreateRequest" method="POST">
+            <h2 class="text-center">Request</h2>
+            <div class="form-group">
+                <label>Type Request</label>
+                <select name="RequestTypeName" class="form-control">
+                    @*nho chen id cua All trong RequestType*@
+                    
+                    @foreach (RequestType type in ViewBag.RequestTypes) {
+                        <option value="@type.Name">@type.Name</option>
+                    }
+
+                </select>
+            </div>
+            <div class="form-group"><label>Title</label><input name="title" class="form-control" type="text" required=""></div>
+            <div class="form-group">
+                <label>Content</label><textarea class="form-control" name="content" rows="14"
+                                                required=""></textarea>
+            </div>
+            <div class="form-group"><button class="btn btn-primary btn-block" type="submit">send </button></div>
+        </form>
+    </section>
+</div>
+

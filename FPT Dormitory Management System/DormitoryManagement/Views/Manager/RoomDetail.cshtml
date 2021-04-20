@@ -1,0 +1,91 @@
+﻿@model DormitoryManagement.Models.Room
+@using DormitoryManagement.Models;
+@{
+    ViewBag.Title = "RoomDetail";
+    Layout = "~/Views/Shared/_ManagerLayout.cshtml";
+}
+
+@if (!Model.CanUse) {
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        This room is under maintenance
+    </div>
+}
+<div class="container-fluid">
+    <a href="javascript:history.back()">Back</a>
+</div>
+<div class="container mt-3">
+    <form>
+        <div class="form-row">
+            <div class="col">
+                <div class="form-group">
+                    <label><strong>Room</strong></label>
+                    <p>@Model.GetRoomName()</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label><strong>Water Usage</strong></label>
+                    <p>@ViewBag.WaterUsage<span>(updated @Convert.ToString(string.Format("{0:dd/MM/yyyy}", ViewBag.UpdateAt)))</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col">
+                <div class="form-group">
+                    <label><strong>Available bed(s)</strong></label>
+                    <p>@ViewBag.NumberOfFreeSlot</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label><strong>Electric Usage</strong></label>
+                    <p>@ViewBag.ElectricUsage <span>(updated 03/12/2021)</span></p>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="card shadow mt-2">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6 text-nowrap">
+                <div id="dataTable_length" class="dataTables_length" aria-controls="dataTable">
+                    <label>
+                        Show <select class="form-control form-control-sm custom-select custom-select-sm">
+                            <option value="10" selected>10</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="table-responsive table mt-2" id="dataTable-1" role="grid"
+             aria-describedby="dataTable_info">
+            <table class="table my-0" id="dataTable">
+                <thead>
+                    <tr>
+                        <th>Bed No</th>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Gender</th>
+                        <th>Email</th>
+                        <th>Detail</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Student student in ViewBag.ListStudentsInRoom) {
+                        <tr>
+                            <td>@student.BedId</td>
+                            <td>@student.StudentCode</td>
+                            <td>@student.Name</td>
+                            <td>@(student.Gender ? "Male" : "Female")</td>
+                            <td>@student.Email</td>
+                            <td><a href="@Url.Action("ViewStudentProfile", "Manager",new { student.Id })">View</a></td>
+                        </tr>
+                    }
+            </table>
+        </div>
+    </div>
+</div>

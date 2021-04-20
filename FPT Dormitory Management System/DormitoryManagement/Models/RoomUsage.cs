@@ -13,9 +13,9 @@ namespace DormitoryManagement.Models
 
         public int? RoomId { get; set; }
 
-        public int? WaterUsage { get; set; }
+        public int WaterUsage { get; set; }
 
-        public int? ElectricUsage { get; set; }
+        public int ElectricUsage { get; set; }
 
         public DateTime? Date { get; set; }
 

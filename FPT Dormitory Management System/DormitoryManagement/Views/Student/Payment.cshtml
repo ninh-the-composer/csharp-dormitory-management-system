@@ -1,0 +1,114 @@
+﻿@using DormitoryManagement.Models;
+@{
+    ViewBag.Title = "Payment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container alert alert-primary" style="margin-top: 50px;">
+    <p class="text-center">@ViewBag.StudentCode Pay @ViewBag.PriceTypeName Fee @string.Format("{0:N0}", ViewBag.Price) VNĐ</p>
+</div>
+<div class="container py-5">
+    <div class="row">
+        <div class="col-lg-7 mx-auto">
+            <div class="bg-white rounded-lg shadow-sm p-5">
+                <!-- Credit card form tabs -->
+                <ul role="tablist" class="nav bg-light nav-pills rounded-pill nav-fill mb-3">
+                    <li class="nav-item">
+                        <a data-toggle="pill" href="#nav-tab-card" class="nav-link active rounded-pill">
+                            <i class="fa fa-credit-card"></i>
+                            Credit Card
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-toggle="pill" href="#nav-tab-bank" class="nav-link rounded-pill">
+                            <i class="fa fa-university"></i>
+                            Bank Transfer
+                        </a>
+                    </li>
+                </ul>
+                <!-- End -->
+                <!-- Credit card form content -->
+                <div class="tab-content">
+
+                    <!-- credit card info-->
+                    <div id="nav-tab-card" class="tab-pane fade show active">
+                        <p class="alert alert-success">Some text success or error</p>
+                        <form role="form" method="post" action="PayInvoice">
+                            <input type="text" name="typeId" value="@ViewBag.TypeId" hidden />
+                            <input type="text" name="bedId" value="@ViewBag.BedId" hidden />
+                            <input type="text" name="numberOfUse" value="@ViewBag.NumberOfUser" hidden />
+                            @if (ViewBag.InvoiceId != null) {
+                                <input type="text" name="invoiceId" value="@ViewBag.InvoiceId" hidden />
+                            }
+                            <input type="text" name="note" value="@ViewBag.Note" hidden />
+                            <div class="form-group">
+                                <label for="username">Full name (on the card)</label>
+                                <input type="text" placeholder="Jeff Doe" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="cardNumber">Card number</label>
+                                <div class="input-group">
+                                    <input type="text" placeholder="Your card number" class="form-control">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text text-muted">
+                                            <i class="fa fa-cc-visa mx-1"></i>
+                                            <i class="fa fa-cc-amex mx-1"></i>
+                                            <i class="fa fa-cc-mastercard mx-1"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <div class="form-group">
+                                        <label><span class="hidden-xs">Expiration</span></label>
+                                        <div class="input-group">
+                                            <input type="number" placeholder="MM" name="" class="form-control">
+                                            <input type="number" placeholder="YY" name="" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group mb-4">
+                                        <label data-toggle="tooltip" title="Three-digits code on the back of your card">
+                                            CVV
+                                            <i class="fa fa-question-circle"></i>
+                                        </label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                            <button type="submit" class="subscribe btn btn-primary btn-block rounded-pill shadow-sm">
+                                Confirm
+                            </button>
+                        </form>
+                    </div>
+                    <!-- End -->
+                    <!-- bank transfer info -->
+                    <div id="nav-tab-bank" class="tab-pane fade">
+                        <h6>Bank account details</h6>
+                        <dl>
+                            <dt>Bank</dt>
+                            <dd>THE WORLD BANK</dd>
+                        </dl>
+                        <dl>
+                            <dt>Account number</dt>
+                            <dd>7775877975</dd>
+                        </dl>
+                        <dl>
+                            <dt>QR</dt>
+                            <dd><img src="~/Content/img/qrcode.png" style="width:150px; height:150px; " /></dd>
+                        </dl>
+                    </div>
+                    <!-- End -->
+                </div>
+                <!-- End -->
+
+            </div>
+        </div>
+    </div>
+</div>
+

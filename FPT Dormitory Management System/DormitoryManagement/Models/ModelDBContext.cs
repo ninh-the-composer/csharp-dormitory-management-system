@@ -1,6 +1,8 @@
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Configuration;
 using System.Data.Entity;
+using System.Data.SqlClient;
 using System.Linq;
 
 namespace DormitoryManagement.Models {
@@ -24,6 +26,16 @@ namespace DormitoryManagement.Models {
         public virtual DbSet<Student> Students { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder) {
+            modelBuilder.Entity<Dom>()
+                .HasMany(e => e.Floors)
+                .WithRequired(e => e.Dom)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Floor>()
+                .HasMany(e => e.Rooms)
+                .WithRequired(e => e.Floor)
+                .WillCascadeOnDelete(false);
+
             modelBuilder.Entity<InvoiceType>()
                 .HasMany(e => e.Invoices)
                 .WithOptional(e => e.InvoiceType)
@@ -35,13 +47,23 @@ namespace DormitoryManagement.Models {
 
             modelBuilder.Entity<PriceType>()
                 .HasMany(e => e.Prices)
-                .WithOptional(e => e.PriceType1)
-                .HasForeignKey(e => e.PriceType);
+                .WithOptional(e => e.PriceType)
+                .HasForeignKey(e => e.TypeId);
 
             modelBuilder.Entity<RequestType>()
                 .HasMany(e => e.Requests)
                 .WithOptional(e => e.RequestType)
                 .HasForeignKey(e => e.TypeId);
+
+            modelBuilder.Entity<Room>()
+                .HasMany(e => e.Beds)
+                .WithRequired(e => e.Room)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Student>()
+                .HasMany(e => e.Invoices)
+                .WithRequired(e => e.Student)
+                .WillCascadeOnDelete(false);
         }
     }
 }

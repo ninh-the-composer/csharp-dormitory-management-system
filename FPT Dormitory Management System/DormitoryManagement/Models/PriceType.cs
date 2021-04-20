@@ -15,7 +15,6 @@ namespace DormitoryManagement.Models
             Prices = new HashSet<Price>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
 
         [StringLength(255)]

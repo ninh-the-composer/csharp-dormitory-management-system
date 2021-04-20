@@ -1,0 +1,130 @@
+﻿@using DormitoryManagement.Models
+@{
+    ViewBag.Title = "ManageStudent";
+    Layout = "~/Views/Shared/_ManagerLayout.cshtml";
+}
+
+<div class="search-box col-md-9">
+        <div class="input-group mb-3">
+            <form action="ManageStudent" method="post" class="input-group-prepend" id="form-search-inputgroup">
+                <div class="btn " type="button"
+                     aria-haspopup="true" aria-expanded="false">
+                    StudentCode
+                </div>
+                <select class="dropdown-menu" data-toggle="dropdown">
+                    <option value="1" class="btn dropdown-item" href="#" type="button"
+                            aria-haspopup="true" aria-expanded="false">
+                        All
+                    </option>
+                    <option value="2" class="dropdown-item" href="#">Email</option>
+                    <option value="3" class="dropdown-item" href="#">Name</option>
+
+                    <option value="4" class="dropdown-item" href="#">Student Code</option>
+                </select>
+            </form>
+            <input type="text" class="form-control" name="StudentCode" value="@ViewBag.searchText" aria-label="Search input with dropdown button"
+                   id="form-search-inputbutton">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="submit">Search</button>
+            </div>
+        </div>
+</div>
+<div class="container-fluid">
+    <h3 class="text-dark mb-1">Manage Student</h3>
+</div>
+@if (ViewBag.listCount == 0) {
+    <h4 style="text-align:center;padding-top:50px;">@ViewBag.NoResult</h4>
+}
+else {
+    <div class="container-fluid">
+        <div class="card shadow">
+            <div class="card-header py-3">
+                <p class="text-primary m-0 font-weight-bold">Student's Info</p>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6 text-nowrap">
+                        <div id="dataTable_length" class="dataTables_length" aria-controls="dataTable">
+                            <label>
+                                Show <select class="form-control form-control-sm custom-select custom-select-sm">
+                                    <option value="10" selected="">10</option>
+                                    <option value="25">25</option>
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-responsive table mt-2" id="dataTable-1" role="grid"
+                     aria-describedby="dataTable_info">
+                    <table class="table my-0" id="dataTable">
+                        <thead>
+                            <tr>
+                                <th>Avatar</th>
+                                <th>Student Code</th>
+                                <th>Name</th>
+                                <th>Gender</th>
+                                <th>Email</th>
+                                <th>Detail</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (Student st in ViewBag.StudentList) {
+                                <tr>
+                                    <td>
+                                        @if (st.Avatar != null && !st.Avatar.Trim().Equals("")) {
+                                            <img class="rounded-circle mr-2" width="30" height="30"
+                                                 src="@st.Avatar" />
+                                        }
+                                        else {
+                                            <img class="rounded-circle mr-2" width="30" height="30"
+                                                 src="~/Content/img/avatar.png" />
+                                        }
+                                    </td>
+                                    <td>@st.StudentCode</td>
+                                    <td>@st.Name</td>
+                                    @if (st.Gender == true) {
+                                        <td>Male</td>
+                                    }
+                                    else {
+                                        <td>Female</td>
+                                    }
+                                    <td>@st.Email</td>
+                                    <td><a href="@Url.Action("ViewStudentDetail", "Manager", new {id = st.Id })">detail</a></td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 align-self-center">
+                        <p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">
+                            Total Students: @ViewBag.listCount
+                       </p>
+                    </div>
+                    <div class="col-md-6">
+                        <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
+                            <ul class="pagination">
+                                @for (int i = 1; i <= ViewBag.maxPage; i++) {
+                                    if (ViewBag.pageIndex == i) {
+                                        <li class="page-item active"><a class="page-link" href="@Url.Action("ManageStudent", "Manager",new { page=i})">@i</a></li>
+                                    }
+                                    else {
+                                        <li class="page-item"><a class="page-link" href="@Url.Action("ManageStudent", "Manager",new { page=i})">@i</a></li>
+                                    }
+                                }
+                                <li class="page-item">
+
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+

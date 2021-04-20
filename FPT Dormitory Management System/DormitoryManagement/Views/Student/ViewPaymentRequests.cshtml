@@ -1,0 +1,67 @@
+﻿@model IEnumerable<DormitoryManagement.Models.Invoice>
+@using DormitoryManagement.Models;
+@{
+    ViewBag.Title = "View Payment Requests";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@if (ViewBag.Success != null) {
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @ViewBag.Success
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}@if (ViewBag.Error != null) {
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @ViewBag.Error
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}
+<div class="container">
+    <div class="table-responsive" style="margin-top: 150px;" id="table-payments">
+
+        @if (Model.Count() == 0) {
+            <h3 style="text-align:center">Nice! You don't have any payments request remain.</h3>
+        } else {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Number of uses</th>
+                        <th>Total</th>
+                        <th>Deadline</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="table-payments-body">
+
+                    @foreach (Invoice paymentRequest in Model) {
+                        <tr>
+                            <td>@paymentRequest.InvoiceType.Name</td>
+                            @if (paymentRequest.NumberOfUse != null) {
+                                <td>@paymentRequest.NumberOfUse</td>
+                            } else {
+                                <td></td>
+                            }
+                            <td>@string.Format("{0:N0}", paymentRequest.Amount) VNĐ</td>
+                            <td>@paymentRequest.Deadline</td>
+                            <td>
+                                <form method="post" action="Payment">
+                                    <input type="text" class="form-control" name="paymentType" value="@paymentRequest.InvoiceType.Name" hidden />
+                                    <input type="text" class="form-control" name="bedId" value="@ViewBag.BedId" hidden />
+                                    <input type="text" class="form-control" name="numberOfUse" value="@paymentRequest.NumberOfUse" hidden />
+                                    <input type="text" class="form-control" name="invoiceId" value="@paymentRequest.Id" hidden />
+                                    <input type="text" class="form-control" name="note" value="@paymentRequest.Note" hidden />
+
+                                    <button class="btn btn-outline-primary" aria-pressed="true">Pay</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+</div>

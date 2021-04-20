@@ -1,0 +1,56 @@
+﻿@using DormitoryManagement.Models;
+@model  PagedList.IPagedList<DormitoryManagement.Models.Request>
+@{
+    ViewBag.Title = "View Request";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center" id="container-bill-header">View Requests</h2>
+<div id="container-request-response">
+    <div class="container">
+        <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>Date Create</th>
+                    <th>Request Type</th>
+                    <th>Title</th>
+                    <th>Purpose</th>
+                    <th>Response</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Request item in ViewBag.StudentRequest) {
+                <tr>
+                    <td>@Convert.ToString(string.Format("{0:dd/MM/yyyy}", item.DateCreated))</td>
+                    <td>@item.RequestType.Name</td>
+                    <td>@item.Title</td>
+                    <td>@item.Purpose</td>
+                    <td>@item.Reply</td>
+                    @if (item.IsDone == true) {
+                        <td>Processed</td>
+                    }
+                    else {
+                        <td>Processing</td>
+                    }
+                </tr>
+                }
+
+            </tbody>
+        </table>
+        <nav id="pagination-viewrequest">
+            <ul class="pagination">
+
+                @for (int i = 1; i <= ViewBag.maxPage; i++) {
+                    if (ViewBag.pageIndex == i) {
+                        <li class="page-item active"><a class="page-link" href="@Url.Action("ViewRequests", "Student",new { page=i})">@i</a></li>
+                    } else {
+                        <li class="page-item"><a class="page-link" href="@Url.Action("ViewRequests", "Student",new { page=i})">@i</a></li>
+                    }
+                }
+
+            </ul>
+        </nav>
+    </div>
+</div>
+

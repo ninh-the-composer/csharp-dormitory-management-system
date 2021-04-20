@@ -1,0 +1,121 @@
+﻿@using DormitoryManagement.Models;
+@using DormitoryManagement.DAL;
+@{
+    ViewBag.Title = "CreatePaymentRequest";
+    Layout = "~/Views/Shared/_ManagerLayout.cshtml";
+}
+@if (ViewBag.Success != null) {
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        @ViewBag.Success
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}@if (ViewBag.Error != null) {
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @ViewBag.Error
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}
+<div class="container-fluid">
+    <div class="row register-form">
+        <div class="col-md-10 offset-md-1">
+            <form class="custom-form" action="CreatePaymentRequest" method="@(ViewBag.HasStudentValid ? "Post" : "get")">
+                <!--sua doan nay sau-->
+                <h1>Create Payment Request </h1>
+                <div class="form-row form-group">
+                    <div class="col-md-12 col-xl-4 label-column">
+                        <label class="col-form-label"
+                               for="name-input-field">
+                            Student Code
+                        </label>
+                    </div>
+                    <div class="col-md-12 col-xl-6 input-column">
+                        <input type="text" class="form-control" name="studentCode" value="@Request.Params["studentCode"]" />
+                    </div>
+                </div>
+
+                @if (ViewBag.HasStudentValid != null && ViewBag.HasStudentValid) {
+                    <div class="form-row form-group">
+                        <div class="col-md-12 col-xl-4 label-column">
+                            <label class="col-form-label"
+                                   for="email-input-field">
+                                Type
+                            </label>
+                        </div>
+
+                        <div class="col-md-12 col-xl-6 input-column">
+                            <select class="form-control" id="payrequest-type" onchange="myFunction()" name="typeId">
+                                <option value="0">Choose Type</option>
+                                @foreach (InvoiceType invoiceType in ViewBag.AllInvoiceTypes) {
+                                    <option value="@invoiceType.Id">@invoiceType.Name</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="form-row form-group">
+                        <div class="col-md-12 col-xl-4 label-column">
+                            <label class="col-form-label">
+                                Usage
+                            </label>
+                        </div>
+                        <div class="col-md-12 col-xl-6 input-column">
+                            <input type="number" class="form-control" name="usage" id="usage" min="0" />
+                        </div>
+                    </div>
+                    <div id="message-usage" style="padding-top: 10px;" class="text-success">
+
+                    </div>
+                    <div class="form-row form-group">
+                        <div class="col-md-12 col-xl-4 label-column">
+                            <label class="col-form-label">
+                                Deadline
+                            </label>
+                        </div>
+                        <div class="col-md-12 col-xl-6 input-column">
+                            <input type="date" class="form-control" name="deadline" />
+                        </div>
+                    </div>
+                    <div class="form-row form-group">
+                        <div class="col-md-12 col-xl-4 label-column">
+                            <label class="col-form-label">
+                                Note
+                            </label>
+                        </div>
+                        <div class="col-md-12 col-xl-6 input-column">
+                            <textarea class="form-control" name="note"
+                                      id="" cols="30" rows="4"></textarea>
+                        </div>
+                    </div>
+                }
+
+
+                <div class="form-row form-group d-flex justify-content-center">
+                    <button id="btn-submit" class="btn btn-primary submit-button" type="submit" onsubmit="validate()">
+                        @(ViewBag.HasStudentValid ? "Create" : "Check")
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+@ViewBag.WaterUsage
+<script>
+    function myFunction() {
+        let payrequestType = document.getElementById("payrequest-type");
+        let messageUsage = document.getElementById("message-usage");
+        if (payrequestType.value == 0) {
+            document.getElementById('btn-submit').style.visibility = 'hidden';
+        } else {
+            document.getElementById('btn-submit').style.visibility = 'visible';
+        }
+
+        messageUsage.innerHTML = "Current Usage " + payrequestType.value;
+    }
+</script>

@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Book Room";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="contact-clean">
+    <form method="post" action="Payment">
+        <h2 class="text-center">Book Room</h2>
+        <input type="text" class="form-control" name="paymentType" value="Room" hidden />
+        <div class="form-group"><label>Dom</label><input type="text" class="form-control" value="@ViewBag.DomName" disabled /></div>
+        <div class="form-group"><label>Room</label><input type="text" class="form-control" value="@ViewBag.RoomName" disabled /></div>
+        <div class="form-group"><label>Bed</label><input type="text" class="form-control" value="@ViewBag.BedNumber" disabled /></div>
+        <div class="form-group"><label>Price: <i>@string.Format("{0:N0}",ViewBag.Price) VNĐ</i></label></div>
+        <input type="text" class="form-control" name="bedId" value="@ViewBag.BedId" hidden />
+        <div class="form-group"><label>Note</label><input type="text" class="form-control" name="note" value="" /></div>
+        <div class="form-group" id="form-group-btn">
+            <a href="javascript:history.back()" class="btn" id="form-group-btn1"
+               type="button">Cancel</a>
+            <button class="btn btn-primary" id="form-group-btn2" type="submit">Go to Payment</button>
+        </div>
+    </form>
+</section>

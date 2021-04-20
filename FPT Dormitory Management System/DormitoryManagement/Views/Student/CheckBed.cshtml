@@ -1,31 +1,111 @@
 ﻿@model IEnumerable<DormitoryManagement.Models.Room>
-
+@using DormitoryManagement.Models;
+@using System.Linq;
 @{
     ViewBag.Title = "CheckBed";
-    Layout = "~/Views/Shared/_TestLayout.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    List<Dom> Doms = ViewBag.Doms as List<Dom>;
 }
+@if (ViewBag.HasInDom) {
+    <div class="container" id="container-error">
+        <h2>Now is not the time for a new booking  </h2>
+        <h3>You are in bed number <strong>@ViewBag.BedNumber</strong> of room <strong>@ViewBag.RoomName</strong> in <strong>Dom @ViewBag.DomName</strong></h3>
+        @Html.ActionLink("Back To Home", "", "Manager", null, new { @class = "btn btn-outline-primary" })
 
-<h2>CheckBed</h2>
+    </div>
+} else {
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Floor.Id)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.RoomNumber)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.RoomGender)
-        </th>
-        <th></th>
-    </tr>
+    <div class="container" id="container-form-checkbed">
+        <section id="form-checkbed" class="newsletter-subscribe">
+            <div class="container">
+                @if (ViewBag.Error != null) {
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                }
+                <div class="intro"></div>
+                <form class="form-inline" method="get" action="CheckBed" id="form-checkbed">
+                    <div class="form-group">
+                        <select class="form-control" name="domId">
+                            <option value="0" selected>Dorm</option>
+                            @foreach (Dom dom in ViewBag.Doms) {
+                                if (Request.Params["domId"] != null && Request.Params["domId"].Equals(dom.Id.ToString())) {
+                                    <option value="@dom.Id" selected>@dom.Name</option>
+                                } else {
+                                    <option value="@dom.Id">@dom.Name</option>
+                                }
+                            }
+                        </select>
+                        <select class="form-control" name="floorNumber">
+                            <option value="0" selected>Floor</option>
+                            @for (int i = 1; i <= 4; i++) {
+                                if (Request.Params["floorNumber"] != null && Request.Params["floorNumber"].Equals(i.ToString())) {
+                                    <option value="@i" selected>@i</option>
+                                } else {
+                                    <option value="@i">@i</option>
+                                }
 
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group"><button class="btn btn-primary" type="submit">Check</button></div>
+                </form>
+            </div>
+        </section>
+    </div>
+    <div class="container">
+        <table id="table-checkbed" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>Room</th>
+                    <th>Left</th>
+                    <th>Right</th>
+                </tr>
+            </thead>
+            <tbody id="checkbed-tbody">
 
-    
+                @foreach (Room room in Model) {
+                    if (!room.CanUse) { continue; }
+                    if (room.RoomGender != null && ViewBag.StudentGender != room.RoomGender) { continue; }
 
-
-</table>
+                    List<Bed> leftBed = new List<Bed>();
+                    List<Bed> rightBed = new List<Bed>();
+                    int i = 0;
+                    foreach (Bed bed in room.Beds) {
+                        if (i++ < 4) {
+                            leftBed.Add(bed);
+                        } else {
+                            rightBed.Add(bed);
+                        }
+                    }
+                    <tr rd="checkbed-tr">
+                        <td style=" vertical-align: inherit;">@room.GetRoomName()</td>
+                        <td>
+                            @foreach (Bed bed in leftBed) {
+                                if (bed.IsAvailable) {
+                                    <a href="@Url.Action("BookRoom", "Student", new {bedId = bed.Id, roomName = bed.Room.GetRoomName(), bedNumber = bed.BedNumber })" type="button" class="btn btn-lg btn-outline-primary">@bed.BedNumber</a>
+                                } else {
+                                    <a href="@Url.Action("BookRoom", "Student", new {bedId = bed.Id, roomName = bed.Room.GetRoomName(), bedNumber = bed.BedNumber })" type="button" class="btn btn-lg btn-primary disabled">@bed.BedNumber</a>
+                                }
+                            }
+                        </td>
+                        <td>
+                            @foreach (Bed bed in rightBed) {
+                                if (bed.IsAvailable) {
+                                    <a href="@Url.Action("BookRoom", "Student", new {bedId = bed.Id, roomName = bed.Room.GetRoomName(), bedNumber = bed.BedNumber })" type="button" class="btn btn-lg btn-outline-primary">@bed.BedNumber</a>
+                                } else {
+                                    <a href="@Url.Action("BookRoom", "Student", new {bedId = bed.Id, roomName = bed.Room.GetRoomName(), bedNumber = bed.BedNumber })" type="button" class="btn btn-lg btn-primary disabled">@bed.BedNumber</a>
+                                }
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <br />
+        <br />
+    </div>
+}

@@ -17,9 +17,9 @@ namespace DormitoryManagement.Models
 
         public int Id { get; set; }
 
-        public int? DomId { get; set; }
+        public int DomId { get; set; }
 
-        public int? Number { get; set; }
+        public int Number { get; set; }
 
         public virtual Dom Dom { get; set; }
 

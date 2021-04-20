@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (ViewBag.Success != null) {
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    @ViewBag.Success
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+}@if (ViewBag.Error != null) {
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    @ViewBag.Error
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+}
+<div id="promo">
+    <div class="jumbotron">
+        <h1>Domitory</h1>
+        <p>Manage room, request, invoice and more. Created for FPT Student</p>
+        <p></p>
+    </div>
+</div>
+<div class="container site-section" id="gallery">
+    <h2>Gallery</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <a href="#">
+                    <img class="img-fluid"
+                         src="~/Content/img/gallery1.jpg">
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <a href="#">
+                    <img class="img-fluid"
+                         src="~/Content/img/gallery2.jpg">
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <a href="#">
+                    <img class="img-fluid" src="~/Content/img/gallery3.jpg">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section-dark">
+    <div class="container site-section" id="features">
+        <h2>Features</h2>
+        <div class="row">
+            <div class="col-12 col-md-4 feature-item">
+                <i class="fa fa-edit"></i>
+                <h3>Request</h3>
+                <p><br>Create invoice to get support for inside dorm problems.<br><br></p>
+            </div>
+            <div class="col-12 col-md-4 feature-item">
+                <i class="fa fa-money"></i>
+                <h3>Invoice</h3>
+                <p><br>View your invoice history with room, electric and water fee<br><br></p>
+            </div>
+            <div class="col-12 col-md-4 feature-item">
+                <i class="fa fa-bookmark-o"></i>
+                <h3>Booking</h3>
+                <p><br>Students are able to check empty room to book.<br><br></p>
+            </div>
+        </div>
+    </div>
+</div>

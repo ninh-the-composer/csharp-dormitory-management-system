@@ -1,0 +1,142 @@
+﻿@using DormitoryManagement.Models;
+@{
+    Account account = Session["Account"] as Account;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>@ViewBag.title</title>
+    <meta name="description" content="Admin site of Dormitory Management System">
+    <link rel="stylesheet" href="~/Content/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="~/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="~/Content/manager-side-style.min.css">
+    <link rel="stylesheet" href="~/Content/bootstrap/css/styles.min.css">
+    @*@Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")*@
+    <title>@ViewBag.Title</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
+            <div class="container-fluid d-flex flex-column p-0">
+                <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0"
+                   href="@Url.Action("", "Manager")">
+                    <div class="sidebar-brand-icon"><i class="fas fa-user-shield"></i></div>
+                    <div class="sidebar-brand-text mx-3"><span>FPT Dormitory</span></div>
+                </a>
+                <div id="welcome-text" style="color: #fff; width: 100%; padding: 1rem;" class="text-start">
+                    Welcome, <br>
+                    <span class="d-inline-block mt-1">@account.Username</span>
+                </div>
+                <hr class="sidebar-divider my-0" />
+                <ul class="navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("", "Manager")">
+                            <i class="fas fa-tachometer-alt"></i><span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("ManageStudent", "Manager")">
+                            <i class="fas fa-user"></i><span>
+                                Manage
+                                Student
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("ManageRoom", "Manager")">
+                            <i class="fas fa-table"></i><span>
+                                Manage
+                                Room
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("CreatePaymentRequest", "Manager")">
+                            <i class="far fa-money-bill-alt"></i><span>
+                                Create Payment Request
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("ViewStudentRequest", "Manager")">
+                            <i class="fas fa-file-invoice"></i><span>
+                                View
+                                Student's Request
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-bed"></i><span>
+                                Swap
+                                Student's Bed
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="text-center d-none d-md-inline">
+                    <button class="btn rounded-circle border-0"
+                            id="sidebarToggle" type="button"></button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+                    <div class="container-fluid">
+                        <button class="btn btn-link d-md-none rounded-circle mr-3"
+                                id="sidebarToggleTop" type="button">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <ul class="navbar-nav flex-nowrap ml-auto">
+                            <li class="nav-item dropdown no-arrow d-flex flex-row justify-content-center align-items-center">
+                                <p class="mt-3">
+                                    <!-- <span class="mr-5 admin-semester" style="font-weight: bold; font-size: 2rem;">SP21</span> -->
+                                    <time datetime="2021-03-19">
+                                        <span class="admin-date">@Convert.ToString(string.Format("{0:MMM dd yyyy}", DateTime.Now))</span>
+                                    </time>
+                                </p>
+                            </li>
+                            <li class="d-none d-sm-block topbar-divider"></li>
+                            <li class="nav-item dropdown no-arrow">
+                                <div class="nav-item dropdown no-arrow">
+                                    <a aria-expanded="false" data-toggle="dropdown"
+                                       class="dropdown-toggle nav-link" href="#">
+                                        <span class="d-none d-lg-inline mr-2 text-gray-600 small">@account.Username</span><img class="border rounded-circle img-profile"
+                                                                                                                      src="assets/img/avatars/avatar3.jpeg" />
+                                    </a>
+                                    <div class="dropdown-menu shadow dropdown-menu-right animated--grow-in">
+                                        <div class="dropdown-divider"></div><a class="dropdown-item" href="@Url.Action("", "Logout")">
+                                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i> Logout
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                @RenderBody()
+
+            </div>
+            <footer class="bg-white sticky-footer">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"><span>Copyright © FPT Dormitory 2021</span></div>
+                </div>
+            </footer>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <script src="~/Scripts/custom-js/jquery.min.js"></script>
+    <script src="~/Content/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="~/Scripts/custom-js/script.min.js"></script>
+</body>
+
+</html>
